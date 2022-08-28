@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 
 public class HomeWorkRightClick {
 
@@ -48,12 +49,18 @@ public class HomeWorkRightClick {
 				.findElement(By.xpath("//*[@class='context-menu-list context-menu-root']//li[3]"));
 
 		copyButton.click();
+		
+		String expectedText = "clicked: copy";
+		String actualText = driver.switchTo().alert().getText();
+		
+		System.out.println("Expected: " + expectedText);
+		System.out.println("Actual: " + actualText);
 
-		String getText = driver.switchTo().alert().getText();
-
-		System.out.println("Get the text: " + getText);
+		Assert.assertEquals(actualText, expectedText, "Text Verification Failed");
 
 		driver.switchTo().alert().accept();
+		
+		System.out.println("Done...");
 
 	}
 
