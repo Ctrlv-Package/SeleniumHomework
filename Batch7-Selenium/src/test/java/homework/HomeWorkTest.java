@@ -19,6 +19,30 @@ public class HomeWorkTest {
 		obj1.doubleClickTest();
 		
 		obj1.tearDown();
+		
+		HomeWorkAddNewJob obj2 = new HomeWorkAddNewJob();
+		
+		obj2.setUp();
+		
+		obj2.addNewJob();
+		
+		obj2.tearDown();
+		
+		HomeWorkDragAndDrop obj3 = new HomeWorkDragAndDrop();
+		
+		obj3.setUp();
+		
+		obj3.dragAndDrop();
+		
+		obj3.tearDown();
+		
+		HomeWorkAddNewJob obj4 = new HomeWorkAddNewJob();
+		
+		obj4.setUp();
+		
+		obj4.addNewJob();
+		
+		obj4.tearDown();
 
 	}
 
